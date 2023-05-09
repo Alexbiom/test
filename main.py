@@ -1,0 +1,8 @@
+str.capitalize()
+str.casefold()
+str.center(width[,fillchar])
+str.count(sub[,start[,end]])
+str.encode(encoding='utf-8', errors='strict')
+str.endswith(suffix[,start[,end]])
+str.find(sub[,start[,end]])
+str.format(*args, **kwargs)
