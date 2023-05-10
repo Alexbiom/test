@@ -1,0 +1,15 @@
+ИЗМЕНЕНИЕ ПАРОЛЯ
+mysql --version		Проверка версии MySql
+sudo systemctl stop mysql.service			Выключить сервер MySql
+sudo systemctl status mysql.service			Проверка состояния MySql
+sudo systemctl set-environment MYSQLD_OPTS="--skip-networking --skip-grant-tables"			Запуск сервера MySql без предоставления таблиц и проверки сети, установка переменной среды MYSQLD_OPTS, используемая MySql при запуске
+sudo systemctl start mysql.service			Запуск службы MySql
+sudo systemctl status mysql.service			Проверка службы MySql, работает или нет
+sudo mysql -u root			Вход в оболочку MySql
+mysql> flush privileges;			Удаление привилегий
+mysql> USE mysql;			Выбор базы данных MySql
+mysql> ALTER USER  'root'@'localhost' IDENTIFIED BY 'the-new-password';			Установка нового пароля root с помощью команды ALTER
+mysql> quit;			После успешного изменения пароля выйти из оболочки MySql
+sudo killall -u mysql			Убить все процессы MySQL еще до перезапуска сервера MySQL
+sudo systemctl restart mysql.service			Перезапуск сервера MySQL
+sudo mysql -u root -p			Войти в систему с новым паролем
